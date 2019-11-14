@@ -23,7 +23,7 @@ class Application
           resp.write "#{item}\n"
         end
       end
-      #/add takes in a GET param with key item. Checks if item is in @@items. Adds if not, or gives and error
+      #/add takes in a GET param with key item. Checks if item is in @@items. Adds if not, or gives an error
     elsif req.path.match(/add/)
       search_term = req.params["item"]
       if @@items.include?(search_term)
